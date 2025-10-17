@@ -103,17 +103,24 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="container nav_pad">
-      <ul>
-        <li><a class="navbar-link" href="index.html">Main</a></li>
-        <li><a class="navbar-link" href="p1.html">Concept Art</a></li>
-        <li><a class="navbar-link" href="p2.html">Graphic Design</a></li>
-        <li><a class="navbar-link" href="p3.html">Sketchbook</a></li>
-        <li><a class="navbar-link" href="p4.html">About</a></li>
-      </ul>
-    </div>
-  </nav>
+ nav.navbar {
+      background-color: #FFEB3B;
+      /* 主导航栏背景色 */
+    }
+
+    nav .navbar-link {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #3E2723;
+      /* 深色文字 */
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav .navbar-link:hover {
+      color: #D32F2F;
+    }
 
   <div class="gallery-container">
     <h2>Paintings</h2>
