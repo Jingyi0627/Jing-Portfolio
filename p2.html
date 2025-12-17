@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
+
   <style>
     body {
       font-family: "Arial", sans-serif;
@@ -55,7 +56,6 @@
       grid-template-columns: repeat(5, 1fr);
     }
 
-    /* 图片的悬浮框效果 */
     .gallery img {
       width: 100%;
       height: 200px;
@@ -64,12 +64,9 @@
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
-    /* 鼠标悬停时图片的效果 */
     .gallery img:hover {
       transform: scale(1.05);
-      /* 放大效果 */
       box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-      /* 阴影效果 */
     }
 
     .image-caption {
@@ -99,13 +96,10 @@
         grid-template-columns: repeat(1, 1fr);
       }
     }
-  </style>
-</head>
 
-<body>
- nav.navbar {
+    /* ✅ 导航栏样式：要放在 style 里，不要放在 body 里 */
+    nav.navbar {
       background-color: #FFEB3B;
-      /* 主导航栏背景色 */
     }
 
     nav .navbar-link {
@@ -113,17 +107,31 @@
       font-weight: 600;
       text-transform: uppercase;
       color: #3E2723;
-      /* 深色文字 */
       text-decoration: none;
       padding: 10px;
+      display: inline-block;
     }
 
     nav .navbar-link:hover {
       color: #D32F2F;
     }
+  </style>
+</head>
+
+<body>
+
+  <!-- 如果你本来就有 navbar HTML，就保留你自己的；
+       如果没有，这里给你一个最简单的示例（可删） -->
+  <!--
+  <nav class="navbar">
+    <a class="navbar-link" href="index.html">Home</a>
+    <a class="navbar-link" href="gallery.html">Gallery</a>
+  </nav>
+  -->
 
   <div class="gallery-container">
     <h2>Paintings</h2>
+
     <div class="gallery flat-art">
       <div class="flip-container" onclick="this.classList.toggle('flipped')">
         <div class="flipper">
@@ -148,6 +156,7 @@
       </div>
     </div>
   </div>
+
   <h2>Photography</h2>
   <div class="gallery photo-art">
     <div>
@@ -191,7 +200,8 @@
       <div class="image-caption">Wish</div>
     </div>
   </div>
-  </div>
+
 </body>
 
 </html>
+
