@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Jingyi Wang-Portfolio</title>
+  <title>Jingyi Wang – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
@@ -11,17 +11,20 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;700&display=swap"
     rel="stylesheet">
 
+  <!-- Base CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
   <style>
+    /* ---------- Global ---------- */
     body {
       font-family: 'Raleway', sans-serif;
       background-color: #faf3e0;
-      /* 确保背景颜色一致 */
       color: #333;
+      margin: 0;
     }
 
     h3 {
@@ -31,6 +34,7 @@
       margin-bottom: 15px;
     }
 
+    /* ---------- Navbar ---------- */
     .navbar {
       background-color: #faf3e0;
       padding: 10px 0;
@@ -39,9 +43,10 @@
     .navbar ul {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       list-style: none;
       padding: 15px 0;
+      margin: 0;
     }
 
     .navbar-link {
@@ -49,60 +54,64 @@
       text-transform: uppercase;
       color: #333;
       text-decoration: none;
+      letter-spacing: 0.05em;
     }
 
     .navbar-link:hover {
-      color: #fff;
+      color: #b00020;
     }
 
+    /* ---------- Header ---------- */
+    .statement_text {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    /* ---------- Gallery ---------- */
     .gallery {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 15px;
       max-width: 90vw;
       margin: auto;
-      padding: 20px 0;
+      padding-bottom: 40px;
     }
 
     .gallery-img {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-      border-radius: 5px;
-      transition: transform 0.3s ease-in-out;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery-img:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
     }
 
+    /* ---------- Media Section ---------- */
     .media-section {
       text-align: center;
-      margin-top: 30px;
       background: #faf3e0;
-      /* 背景色调整一致 */
-      padding: 20px;
-      border-radius: 8px;
+      padding: 40px 20px;
+      max-width: 85%;
+      margin: 40px auto;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      max-width: 80%;
-      margin: 30px auto;
     }
 
     .media-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
       justify-items: center;
-      padding: 20px;
-    }
-
-    .media-item {
-      text-align: center;
+      margin-top: 20px;
     }
 
     .media-item p {
       font-weight: 700;
-      font-size: 1.1rem;
       margin-top: 10px;
     }
 
@@ -111,8 +120,14 @@
     .media-item img {
       width: 100%;
       max-width: 320px;
-      /* 保证大小一致 */
       border-radius: 8px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
@@ -130,6 +145,8 @@
 </head>
 
 <body>
+
+  <!-- ✅ Navigation -->
   <nav class="navbar">
     <ul>
       <li><a class="navbar-link" href="index.html">Main</a></li>
@@ -140,34 +157,38 @@
     </ul>
   </nav>
 
+  <!-- Header -->
   <div class="container">
     <header class="twelve columns">
       <h3>Sketchbook</h3>
-      <div class="statement_text" style="text-align: center; font-style: italic;">All new souls are given unique and
-        individual personalities.</div>
+      <div class="statement_text">
+        All new souls are given unique and individual personalities.
+      </div>
     </header>
   </div>
 
+  <!-- Image Gallery -->
   <div class="gallery">
-    <img src="image/V-1.jpg" class="gallery-img" alt="作品 1">
-    <img src="image/V-2.jpg" class="gallery-img" alt="作品 2">
-    <img src="image/V-3.jpg" class="gallery-img" alt="作品 3">
-    <img src="image/V-4.jpg" class="gallery-img" alt="作品 4">
-    <img src="images/V-5.jpg" class="gallery-img" alt="作品 5">
-    <img src="images/V-6.jpg" class="gallery-img" alt="作品 6">
-    <img src="images/V-7.jpg" class="gallery-img" alt="作品 7">
-    <img src="images/V-8.jpg" class="gallery-img" alt="作品 8">
-    <img src="image/R-1.jpg" class="gallery-img" alt="作品 9">
-    <img src="image/R-2.jpg" class="gallery-img" alt="作品 10">
+    <img src="image/V-1.jpg" class="gallery-img" alt="">
+    <img src="image/V-2.jpg" class="gallery-img" alt="">
+    <img src="image/V-3.jpg" class="gallery-img" alt="">
+    <img src="image/V-4.jpg" class="gallery-img" alt="">
+    <img src="images/V-5.jpg" class="gallery-img" alt="">
+    <img src="images/V-6.jpg" class="gallery-img" alt="">
+    <img src="images/V-7.jpg" class="gallery-img" alt="">
+    <img src="images/V-8.jpg" class="gallery-img" alt="">
+    <img src="image/R-1.jpg" class="gallery-img" alt="">
+    <img src="image/R-2.jpg" class="gallery-img" alt="">
   </div>
 
+  <!-- Media -->
   <div class="media-section">
     <h3>Sound Design</h3>
+
     <div class="media-container">
       <div class="media-item">
         <video controls>
           <source src="video/p-1.mov" type="video/mp4">
-          Your browser does not support the video tag.
         </video>
         <p>Dreamland</p>
       </div>
@@ -175,7 +196,6 @@
       <div class="media-item">
         <video controls>
           <source src="video/Video Art Exercise 4 Video + Sound Essay Project.mov" type="video/mp4">
-          Your browser does not support the video tag.
         </video>
         <p>Fairy Tales</p>
       </div>
@@ -183,7 +203,6 @@
       <div class="media-item">
         <audio controls>
           <source src="video/p-2.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
         </audio>
         <p>Landslide</p>
       </div>
@@ -191,7 +210,6 @@
       <div class="media-item">
         <video controls>
           <source src="video/E-1.mov" type="video/mp4">
-          Your browser does not support the video tag.
         </video>
         <p>Fence</p>
       </div>
@@ -199,17 +217,17 @@
       <div class="media-item">
         <video controls>
           <source src="video/森林blender动画.mov" type="video/mp4">
-          Your browser does not support the video tag.
         </video>
         <p>Forests</p>
       </div>
 
       <div class="media-item">
-        <img src="images/屏幕截图 2025-03-26 154558.png" alt="Sound Image">
+        <img src="images/屏幕截图 2025-03-26 154558.png" alt="">
         <p>Sound Visual</p>
       </div>
     </div>
   </div>
-</body>
 
+</body>
 </html>
+
